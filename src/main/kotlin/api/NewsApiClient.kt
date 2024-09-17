@@ -61,7 +61,7 @@ class NewsApiClient {
 
     fun getNewsDetails(newsId: Int, fields: String = ""): News? = runBlocking {
         try {
-            logger.info("Запрос деталей новости с id $newsId с полями $fields")
+            logger.info("Запрос деталей новостей с id $newsId с полями $fields")
             return@runBlocking client.get {
                 url("https://kudago.com/public-api/v1.4/news/$newsId/")
                 parameter("fields", fields)
